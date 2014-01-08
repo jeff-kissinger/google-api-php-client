@@ -17,6 +17,7 @@ namespace Google;
  * limitations under the License.
  */
 
+use Exception;
 
 class GoogleException extends Exception
 {

@@ -17,7 +17,6 @@ namespace Google\Auth;
  * limitations under the License.
  */
 
-
-class AuthException extends \Google\AuthException
+class AuthException extends \Google\GoogleException
 {
 }
