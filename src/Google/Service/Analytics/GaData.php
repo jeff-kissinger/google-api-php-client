@@ -1,0 +1,204 @@
+<?php
+namespace Google\Service\Analytics;
+
+/*
+ * Copyright 2010 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+
+class GaData extends \Google\Collection
+{
+  protected $columnHeadersType = '\Google\Service\Analytics\GaDataColumnHeaders';
+  protected $columnHeadersDataType = 'array';
+  public $containsSampledData;
+  protected $dataTableType = '\Google\Service\Analytics\GaDataDataTable';
+  protected $dataTableDataType = '';
+  public $id;
+  public $itemsPerPage;
+  public $kind;
+  public $nextLink;
+  public $previousLink;
+  protected $profileInfoType = '\Google\Service\Analytics\GaDataProfileInfo';
+  protected $profileInfoDataType = '';
+  protected $queryType = '\Google\Service\Analytics\GaDataQuery';
+  protected $queryDataType = '';
+  public $rows;
+  public $sampleSize;
+  public $sampleSpace;
+  public $selfLink;
+  public $totalResults;
+  public $totalsForAllResults;
+
+  public function setColumnHeaders($columnHeaders)
+  {
+    $this->columnHeaders = $columnHeaders;
+  }
+
+  public function getColumnHeaders()
+  {
+    return $this->columnHeaders;
+  }
+  
+  public function setContainsSampledData($containsSampledData)
+  {
+    $this->containsSampledData = $containsSampledData;
+  }
+
+  public function getContainsSampledData()
+  {
+    return $this->containsSampledData;
+  }
+  
+  public function setDataTable(\Google\Service\Analytics\GaDataDataTable $dataTable)
+  {
+    $this->dataTable = $dataTable;
+  }
+
+  public function getDataTable()
+  {
+    return $this->dataTable;
+  }
+  
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+
+  public function getId()
+  {
+    return $this->id;
+  }
+  
+  public function setItemsPerPage($itemsPerPage)
+  {
+    $this->itemsPerPage = $itemsPerPage;
+  }
+
+  public function getItemsPerPage()
+  {
+    return $this->itemsPerPage;
+  }
+  
+  public function setKind($kind)
+  {
+    $this->kind = $kind;
+  }
+
+  public function getKind()
+  {
+    return $this->kind;
+  }
+  
+  public function setNextLink($nextLink)
+  {
+    $this->nextLink = $nextLink;
+  }
+
+  public function getNextLink()
+  {
+    return $this->nextLink;
+  }
+  
+  public function setPreviousLink($previousLink)
+  {
+    $this->previousLink = $previousLink;
+  }
+
+  public function getPreviousLink()
+  {
+    return $this->previousLink;
+  }
+  
+  public function setProfileInfo(\Google\Service\Analytics\GaDataProfileInfo $profileInfo)
+  {
+    $this->profileInfo = $profileInfo;
+  }
+
+  public function getProfileInfo()
+  {
+    return $this->profileInfo;
+  }
+  
+  public function setQuery(\Google\Service\Analytics\GaDataQuery $query)
+  {
+    $this->query = $query;
+  }
+
+  public function getQuery()
+  {
+    return $this->query;
+  }
+  
+  public function setRows($rows)
+  {
+    $this->rows = $rows;
+  }
+
+  public function getRows()
+  {
+    return $this->rows;
+  }
+  
+  public function setSampleSize($sampleSize)
+  {
+    $this->sampleSize = $sampleSize;
+  }
+
+  public function getSampleSize()
+  {
+    return $this->sampleSize;
+  }
+  
+  public function setSampleSpace($sampleSpace)
+  {
+    $this->sampleSpace = $sampleSpace;
+  }
+
+  public function getSampleSpace()
+  {
+    return $this->sampleSpace;
+  }
+  
+  public function setSelfLink($selfLink)
+  {
+    $this->selfLink = $selfLink;
+  }
+
+  public function getSelfLink()
+  {
+    return $this->selfLink;
+  }
+  
+  public function setTotalResults($totalResults)
+  {
+    $this->totalResults = $totalResults;
+  }
+
+  public function getTotalResults()
+  {
+    return $this->totalResults;
+  }
+  
+  public function setTotalsForAllResults($totalsForAllResults)
+  {
+    $this->totalsForAllResults = $totalsForAllResults;
+  }
+
+  public function getTotalsForAllResults()
+  {
+    return $this->totalsForAllResults;
+  }
+  
+}

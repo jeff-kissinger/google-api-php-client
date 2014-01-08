@@ -1,0 +1,146 @@
+<?php
+namespace Google\Service\Blogger;
+
+/*
+ * Copyright 2010 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+
+class Page extends \Google\Model
+{
+  protected $authorType = '\Google\Service\Blogger\PageAuthor';
+  protected $authorDataType = '';
+  protected $blogType = '\Google\Service\Blogger\PageBlog';
+  protected $blogDataType = '';
+  public $content;
+  public $id;
+  public $kind;
+  public $published;
+  public $selfLink;
+  public $status;
+  public $title;
+  public $updated;
+  public $url;
+
+  public function setAuthor(\Google\Service\Blogger\PageAuthor $author)
+  {
+    $this->author = $author;
+  }
+
+  public function getAuthor()
+  {
+    return $this->author;
+  }
+
+  public function setBlog(\Google\Service\Blogger\PageBlog $blog)
+  {
+    $this->blog = $blog;
+  }
+
+  public function getBlog()
+  {
+    return $this->blog;
+  }
+
+  public function setContent($content)
+  {
+    $this->content = $content;
+  }
+
+  public function getContent()
+  {
+    return $this->content;
+  }
+
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+
+  public function getId()
+  {
+    return $this->id;
+  }
+
+  public function setKind($kind)
+  {
+    $this->kind = $kind;
+  }
+
+  public function getKind()
+  {
+    return $this->kind;
+  }
+
+  public function setPublished($published)
+  {
+    $this->published = $published;
+  }
+
+  public function getPublished()
+  {
+    return $this->published;
+  }
+
+  public function setSelfLink($selfLink)
+  {
+    $this->selfLink = $selfLink;
+  }
+
+  public function getSelfLink()
+  {
+    return $this->selfLink;
+  }
+
+  public function setStatus($status)
+  {
+    $this->status = $status;
+  }
+
+  public function getStatus()
+  {
+    return $this->status;
+  }
+
+  public function setTitle($title)
+  {
+    $this->title = $title;
+  }
+
+  public function getTitle()
+  {
+    return $this->title;
+  }
+
+  public function setUpdated($updated)
+  {
+    $this->updated = $updated;
+  }
+
+  public function getUpdated()
+  {
+    return $this->updated;
+  }
+
+  public function setUrl($url)
+  {
+    $this->url = $url;
+  }
+
+  public function getUrl()
+  {
+    return $this->url;
+  }
+}
