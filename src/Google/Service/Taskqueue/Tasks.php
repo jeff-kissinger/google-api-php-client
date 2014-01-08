@@ -18,7 +18,7 @@ namespace Google\Service\Taskqueue;
  */
 
 
-class extends \Google\Collection
+class Tasks extends \Google\Collection
 {
   protected $itemsType = '\Google\Service\Taskqueue\Task';
   protected $itemsDataType = 'array';

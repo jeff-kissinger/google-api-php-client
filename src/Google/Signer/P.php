@@ -24,7 +24,7 @@ namespace Google\Signer;
  *
  * @author Brian Eaton <beaton@google.com>
  */
-class extends \Google\Signer\Abstract
+class P extends \Google\Signer\SignerAbstract
 {
   // OpenSSL private key resource
   private $privateKey;
@@ -33,8 +33,7 @@ class extends \Google\Signer\Abstract
   public function __construct($p12, $password)
   {
     if (!function_exists('openssl_x509_read')) {
-      throw new \Google\read')) {
-      throw new GoogleException(
+      throw new \Google\GoogleException(
           'The Google PHP API library needs the openssl PHP extension'
       );
     }

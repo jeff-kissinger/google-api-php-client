@@ -25,7 +25,7 @@ require_once 'Google/Signer/Abstract.php';
  *
  * @author Brian Eaton <beaton@google.com>
  */
-class Google_Signer_P12 extends Google_Signer_Abstract
+class P12 extends \Google\Signer\SignerAbstract
 {
   // OpenSSL private key resource
   private $privateKey;

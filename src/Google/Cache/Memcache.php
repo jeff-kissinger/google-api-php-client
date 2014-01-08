@@ -27,7 +27,7 @@ namespace Google\Cache;
  *
  * @author Chris Chabot <chabotc@google.com>
  */
-class Memcache extends \Google\Cache\Abstract
+class Memcache extends \Google\Cache\CacheAbstract
 {
   private $connection = false;
   private $mc = false;

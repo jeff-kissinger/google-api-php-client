@@ -22,7 +22,7 @@ namespace Google\Verifier;
  *
  * @author Brian Eaton <beaton@google.com>
  */
-class Pem extends \Google\Verifier\Abstract
+class Pem extends \Google\Verifier\VerifierAbstract
 {
   private $publicKey;
 
@@ -38,8 +38,7 @@ class Pem extends \Google\Verifier\Abstract
   public function __construct($pem)
   {
     if (!function_exists('openssl_x509_read')) {
-      throw new \Google\read')) {
-      throw new GoogleException('Google API PHP client needs the openssl PHP extension');
+      throw new \Google\GoogleException('Google API PHP client needs the openssl PHP extension');
     }
     $this->publicKey = openssl_x509_read($pem);
     if (!$this->publicKey) {

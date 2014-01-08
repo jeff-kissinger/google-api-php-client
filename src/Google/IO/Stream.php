@@ -18,7 +18,7 @@ namespace Google\IO;
  */
 
 
-class Stream extends \Google\IO\Abstract
+class Stream extends \Google\IO\IOAbstract
 {
 
   private static $ENTITY_HTTP_METHODS = array("POST" => null, "PUT" => null);

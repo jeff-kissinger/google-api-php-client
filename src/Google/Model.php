@@ -191,8 +191,7 @@ class Model implements ArrayAccess
   public function assertIsArray($obj, $method)
   {
     if ($obj && !is_array($obj)) {
-      throw new \Google\array($obj)) {
-      throw new GoogleException(
+      \Google\GoogleException(
           "Incorrect parameter type passed to $method(),"
           . " expected an array."
       );

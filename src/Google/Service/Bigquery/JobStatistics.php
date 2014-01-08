@@ -18,7 +18,7 @@ namespace Google\Service\Bigquery;
  */
 
 
-class extends \Google\Model
+class JobStatistics extends \Google\Model
 {
   public $inputFileBytes;
   public $inputFiles;

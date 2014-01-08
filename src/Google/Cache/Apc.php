@@ -25,7 +25,7 @@ namespace Google\Cache;
  *
  * @author Chris Chabot <chabotc@google.com>
  */
-class Apc extends \Google\Cache\Abstract
+class Apc extends \Google\Cache\CacheAbstract
 {
   public function __construct(\Google\Client $client)
   {

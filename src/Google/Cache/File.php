@@ -18,7 +18,7 @@ namespace Google\Cache;
  */
 
 
-class File extends \Google\Cache\Abstract
+class File extends \Google\Cache\CacheAbstract
 {
   const MAX_LOCK_RETRIES = 10;
   private $path;

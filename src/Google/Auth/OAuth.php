@@ -24,7 +24,7 @@ namespace Google\Auth;
  * @author Chirag Shah <chirags@google.com>
  *
  */
-class extends \Google\Auth\Abstract
+class OAuth extends \Google\Auth\AuthAbstract
 {
   const OAUTH2_REVOKE_URI = 'https://accounts.google.com/o/oauth2/revoke';
   const OAUTH2_TOKEN_URI = 'https://accounts.google.com/o/oauth2/token';

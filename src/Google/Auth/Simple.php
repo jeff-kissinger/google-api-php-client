@@ -24,7 +24,7 @@ namespace Google\Auth;
  * @author Chris Chabot <chabotc@google.com>
  * @author Chirag Shah <chirags@google.com>
  */
-class Simple extends \Google\Auth\Abstract
+class Simple extends \Google\Auth\AuthAbstract
 {
   private $key = null;
   private $client;

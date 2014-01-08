@@ -116,7 +116,7 @@ class CacheParser
   public static function isExpired(\Google\Http\Request $resp)
   {
     // HTTP/1.1 clients and caches MUST treat other invalid date formats,
-    // especially including the value “0”, as in the past.
+    // especially including the value ���0���, as in the past.
     $parsedExpires = false;
     $responseHeaders = $resp->getResponseHeaders();
 
@@ -148,15 +148,23 @@ class CacheParser
       // We can't default this to now, as that means future cache reads
       // will always pass with the logic below, so we will require a
       // date be injected if not supplied.
-      throw new \Google\numeric($rawExpires) && $rawExpires <= 0)) {
-        return true;
-      }
+      throw new Google\GoogleException("All cacheable requests must have creation dates.");
 
-      // See if we can parse the expires header.
-      $parsedExpires = strtotime($rawExpires);
-      if (false == $parsedExpires || $parsedExpires <= 0) {
-        return true;
+      if (false == $freshnessLifetime && isset($responseHeaders['expires'])) {
+      	$freshnessLifetime = $parsedExpires - $parsedDate;
       }
+      
+      if (false == $freshnessLifetime) {
+      	return true;
+      }
+      
+      // Calculate the age of an http response.
+      $age = max(0, time() - $parsedDate);
+      if (isset($responseHeaders['age'])) {
+      	$age = max($age, strtotime($responseHeaders['age']));
+      }
+      
+      return $freshnessLifetime <= $age;      
     }
 
     // Calculate the freshness of an http response.
@@ -207,4 +215,3 @@ class CacheParser
     return self::isExpired($response);
   }
 }
-

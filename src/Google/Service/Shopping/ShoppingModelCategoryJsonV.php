@@ -18,7 +18,7 @@ namespace Google\Service\Shopping;
  */
 
 
-class extends \Google\Collection
+class ShoppingModelCategoryJsonV extends \Google\Collection
 {
   public $id;
   public $parents;

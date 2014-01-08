@@ -74,16 +74,12 @@ class Resource
    * @param $arguments
    * @param $expected_class - optional, the expected class name
    * @return \Google\Http\Request|expected_class
-   * @throws \Google\class
-   * @throws GoogleException
+   * @throws \Google\GoogleException
    */
   public function call($name, $arguments, $expected_class = null)
   {
-    if (! isset($this->methods[$name])) {
-      throw new \Google\class = null)
-  {
-    if (! isset($this->methods[$name])) {
-      throw new GoogleException(
+     if (! isset($this->methods[$name])) {
+      throw new \Google\GoogleException(
           "Unknown function: " .
           "{$this->serviceName}->{$this->resourceName}->{$name}()"
       );
@@ -126,15 +122,9 @@ class Resource
         $method['parameters'],
         $this->stackParameters
     );
-    foreach ($parameters as $key => $val) {
+      foreach ($parameters as $key => $val) {
       if ($key != 'postBody' && ! isset($method['parameters'][$key])) {
-        throw new \Google\merge(
-        $method['parameters'],
-        $this->stackParameters
-    );
-    foreach ($parameters as $key => $val) {
-      if ($key != 'postBody' && ! isset($method['parameters'][$key])) {
-        throw new GoogleException("($name) unknown parameter: '$key'");
+        throw new \Google\GoogleException("($name) unknown parameter: '$key'");
       }
     }
 
@@ -143,16 +133,7 @@ class Resource
           $paramSpec['required'] &&
           ! isset($parameters[$paramName])
       ) {
-        throw new Google_("($name) unknown parameter: '$key'");
-      }
-    }
-
-    foreach ($method['parameters'] as $paramName => $paramSpec) {
-      if (isset($paramSpec['required']) &&
-          $paramSpec['required'] &&
-          ! isset($parameters[$paramName])
-      ) {
-        throw new GoogleException("($name) missing required param: '$paramName'");
+        throw new Google_Exception("($name) missing required param: '$paramName'");
       }
       if (isset($parameters[$paramName])) {
         $value = $parameters[$paramName];

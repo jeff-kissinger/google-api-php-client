@@ -260,21 +260,6 @@ class MediaFileUpload
     if (200 == $code && true == $location) {
       return $location;
     }
-    throw new \Google\Utils::getStrLen($body),
-        'x-upload-content-type' => $this->mimeType,
-        'x-upload-content-length' => $this->size,
-        'expect' => '',
-      );
-      $this->request->setRequestHeaders($headers);
-    }
-
-    $response = $this->client->getIo()->makeRequest($this->request);
-    $location = $response->getResponseHeader('location');
-    $code = $response->getResponseHttpCode();
-
-    if (200 == $code && true == $location) {
-      return $location;
-    }
-    throw new GoogleException("Failed to start the resumable upload");
+    throw new \Google\GoogleException("Failed to start the resumable upload");
   }
 }

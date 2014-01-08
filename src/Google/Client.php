@@ -134,10 +134,7 @@ class Client
     $data = json_decode($json);
     $key = isset($data->installed) ? 'installed' : 'web';
     if (!isset($data->$key)) {
-      throw new \Google\decode($json);
-    $key = isset($data->installed) ? 'installed' : 'web';
-    if (!isset($data->$key)) {
-      throw new GoogleException("Invalid client secret JSON file.");
+      throw new \Google\GoogleException("Invalid client secret JSON file.");
     }
     $this->setClientId($data->$key->client_id);
     $this->setClientSecret($data->$key->client_secret);
@@ -483,14 +480,11 @@ class Client
           . $this->getLibraryVersion()
       );
       $request->maybeMoveParametersToBody();
-      return \Google\Http\REST::execute($this, $request);
+          return \Google\Http\REST::execute($this, $request);
     } else if ($request instanceof \Google\Http\Batch) {
       return $request->execute();
     } else {
-      throw new \Google\Batch) {
-      return $request->execute();
-    } else {
-      throw new GoogleException("Do not know how to execute this type of object.");
+      throw new \Google\GoogleException("Do not know how to execute this type of object.");
     }
   }
 
