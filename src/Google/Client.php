@@ -98,11 +98,11 @@ class Client
   {
     return self::LIBVER;
   }
-  
+
   /**
-   * Shim function until templates are updated. 
+   * Shim function until templates are updated.
    * @todo(ianbarber): remove this.
-   * @deprecated 
+   * @deprecated
    */
   public function addService($a, $b, $c)
   {
@@ -413,9 +413,9 @@ class Client
     $this->requestedScopes = array();
     $this->addScope($scopes);
   }
-  
+
   /**
-   * This functions adds a scope to be requested as part of the OAuth2.0 flow. 
+   * This functions adds a scope to be requested as part of the OAuth2.0 flow.
    * Will append any scopes not previously requested to the scope parameter.
    * A single string will be treated as a scope to request. An array of strings
    * will each be appended.
@@ -465,7 +465,7 @@ class Client
   {
     $this->deferExecution = $defer;
   }
-  
+
   /**
    * Helper method to execute deferred HTTP requests.
    *
@@ -541,7 +541,7 @@ class Client
   public function getClassConfig($class, $key = null)
   {
     if (!is_string($class)) {
-      $class = get_class($class);
+      $class = "\\" . get_class($class);
     }
     return $this->config->getClassConfig($class, $key);
   }
