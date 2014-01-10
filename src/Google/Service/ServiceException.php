@@ -4,7 +4,7 @@ namespace Google\Service;
 
 
 
-class ServiceException extends \Google\ServiceException
+class ServiceException extends \Google\GoogleException
 {
   /**
    * Optional list of errors returned in a JSON body of an HTTP error response.

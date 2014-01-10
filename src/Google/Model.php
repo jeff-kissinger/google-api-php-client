@@ -18,13 +18,16 @@ namespace Google;
  */
 
 /**
- * This class defines attributes, valid values, and usage which is generated         
+ * This class defines attributes, valid values, and usage which is generated
  * from a given json schema.
  * http://tools.ietf.org/html/draft-zyp-json-schema-03#section-5
  *
  * @author Chirag Shah <chirags@google.com>
  *
  */
+
+use ArrayAccess;
+
 class Model implements ArrayAccess
 {
   protected $data = array();
@@ -94,7 +97,7 @@ class Model implements ArrayAccess
     }
     $this->data = $array;
   }
-  
+
   /**
    * Create a simplified object suitable for straightforward
    * conversion to JSON. This is relatively expensive
@@ -141,28 +144,6 @@ class Model implements ArrayAccess
     $keys = array_keys($array);
     foreach ($keys as $key) {
       if (is_string($key)) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  /**
-   * Given a variable name, discover its type.
-   *
-   * @param $name
-   * @param $item
-   * @return object The object from the item.
-   */
-  private function createObjectFromName($name, $item)
-  {
-    $type = $this->$name;
-    return new $type($item);
-  }
-
-  /**
-   * Verify if $obj is an array.
-   * @throws \Google\string($key)) {
         return true;
       }
     }
