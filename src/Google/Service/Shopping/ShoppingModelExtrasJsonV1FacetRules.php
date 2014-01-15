@@ -18,32 +18,9 @@ namespace Google\Service\Shopping;
  */
 
 
-class BackendTimes extends \Google\Model
+class ShoppingModelExtrasJsonV1FacetRules extends \Google\Model
 {
-  public $elapsedMillis;
-  public $hostName;
   public $name;
-  public $serverMillis;
-
-  public function setElapsedMillis($elapsedMillis)
-  {
-    $this->elapsedMillis = $elapsedMillis;
-  }
-
-  public function getElapsedMillis()
-  {
-    return $this->elapsedMillis;
-  }
-
-  public function setHostName($hostName)
-  {
-    $this->hostName = $hostName;
-  }
-
-  public function getHostName()
-  {
-    return $this->hostName;
-  }
 
   public function setName($name)
   {
@@ -53,15 +30,5 @@ class BackendTimes extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-
-  public function setServerMillis($serverMillis)
-  {
-    $this->serverMillis = $serverMillis;
-  }
-
-  public function getServerMillis()
-  {
-    return $this->serverMillis;
   }
 }

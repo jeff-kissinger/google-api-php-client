@@ -8,10 +8,6 @@ namespace Google;
  * exposes the items array for iteration, so you can just
  * iterate over the object rather than a reference inside.
  */
-
-use Iterator;
-use Countable;
-
 class Collection extends \Google\Model implements Iterator, Countable
 {
   protected $collection_key = 'items';

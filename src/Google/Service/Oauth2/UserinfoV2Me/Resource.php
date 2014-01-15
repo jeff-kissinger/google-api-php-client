@@ -1,5 +1,5 @@
 <?php
-namespace Google\Service\Games;
+namespace Google\Service\Oauth2\UserinfoV2Me;
 
 /*
  * Copyright 2010 Google Inc.
@@ -17,31 +17,27 @@ namespace Google\Service\Games;
  * the License.
  */
 
-
-class PStatuses extends \Google\Collection
+/**
+ * The "me" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $oauth2Service = new Google_Service_Oauth2(...);
+ *   $me = $oauth2Service->me;
+ *  </code>
+ */
+class Resource extends \Google\Service\Resource
 {
-  public $kind;
-  protected $updatesType = '\Google\Service\Games\RoomP2PStatus';
-  protected $updatesDataType = 'array';
 
-  public function setKind($kind)
+  /**
+   * (me.get)
+   *
+   * @param array $optParams Optional parameters.
+   * @return \Google\Service\Oauth2\Userinfo
+   */
+  public function get($optParams = array())
   {
-    $this->kind = $kind;
+    $params = array();
+    $params = array_merge($params, $optParams);
+    return $this->call('get', array($params), "\Google\Service\Oauth2\Userinfo");
   }
-
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  
-  public function setUpdates($updates)
-  {
-    $this->updates = $updates;
-  }
-
-  public function getUpdates()
-  {
-    return $this->updates;
-  }
-  
 }

@@ -18,18 +18,31 @@ namespace Google\Service\Prediction;
  */
 
 
-class Insert extends \Google\Collection
+class Insert2 extends \Google\Model
 {
+  public $created;
   public $id;
+  public $kind;
+  protected $modelInfoType = '\Google\Service\Prediction\Insert2ModelInfo';
+  protected $modelInfoDataType = '';
   public $modelType;
-  public $sourceModel;
+  public $selfLink;
   public $storageDataLocation;
   public $storagePMMLLocation;
   public $storagePMMLModelLocation;
-  protected $trainingInstancesType = '\Google\Service\Prediction\InsertTrainingInstances';
-  protected $trainingInstancesDataType = 'array';
-  public $utility;
+  public $trainingComplete;
+  public $trainingStatus;
 
+  public function setCreated($created)
+  {
+    $this->created = $created;
+  }
+
+  public function getCreated()
+  {
+    return $this->created;
+  }
+  
   public function setId($id)
   {
     $this->id = $id;
@@ -38,6 +51,26 @@ class Insert extends \Google\Collection
   public function getId()
   {
     return $this->id;
+  }
+  
+  public function setKind($kind)
+  {
+    $this->kind = $kind;
+  }
+
+  public function getKind()
+  {
+    return $this->kind;
+  }
+  
+  public function setModelInfo(\Google\Service\Prediction\Insert2ModelInfo $modelInfo)
+  {
+    $this->modelInfo = $modelInfo;
+  }
+
+  public function getModelInfo()
+  {
+    return $this->modelInfo;
   }
   
   public function setModelType($modelType)
@@ -50,14 +83,14 @@ class Insert extends \Google\Collection
     return $this->modelType;
   }
   
-  public function setSourceModel($sourceModel)
+  public function setSelfLink($selfLink)
   {
-    $this->sourceModel = $sourceModel;
+    $this->selfLink = $selfLink;
   }
 
-  public function getSourceModel()
+  public function getSelfLink()
   {
-    return $this->sourceModel;
+    return $this->selfLink;
   }
   
   public function setStorageDataLocation($storageDataLocation)
@@ -90,24 +123,24 @@ class Insert extends \Google\Collection
     return $this->storagePMMLModelLocation;
   }
   
-  public function setTrainingInstances($trainingInstances)
+  public function setTrainingComplete($trainingComplete)
   {
-    $this->trainingInstances = $trainingInstances;
+    $this->trainingComplete = $trainingComplete;
   }
 
-  public function getTrainingInstances()
+  public function getTrainingComplete()
   {
-    return $this->trainingInstances;
+    return $this->trainingComplete;
   }
   
-  public function setUtility($utility)
+  public function setTrainingStatus($trainingStatus)
   {
-    $this->utility = $utility;
+    $this->trainingStatus = $trainingStatus;
   }
 
-  public function getUtility()
+  public function getTrainingStatus()
   {
-    return $this->utility;
+    return $this->trainingStatus;
   }
   
 }

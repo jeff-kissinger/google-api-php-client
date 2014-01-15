@@ -32,8 +32,7 @@ class Pem extends \Google\Verifier\VerifierAbstract
    * $pem: a PEM encoded certificate (not a file).
    * @param $pem
    * @throws \Google\Auth\AuthException
-   * @throws Google_
-   * @throws GoogleException
+   * @throws \Google\GoogleException
    */
   public function __construct($pem)
   {

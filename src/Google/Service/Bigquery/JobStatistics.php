@@ -20,48 +20,72 @@ namespace Google\Service\Bigquery;
 
 class JobStatistics extends \Google\Model
 {
-  public $inputFileBytes;
-  public $inputFiles;
-  public $outputBytes;
-  public $outputRows;
+  public $creationTime;
+  public $endTime;
+  protected $loadType = '\Google\Service\Bigquery\JobStatistics3';
+  protected $loadDataType = '';
+  protected $queryType = '\Google\Service\Bigquery\JobStatistics2';
+  protected $queryDataType = '';
+  public $startTime;
+  public $totalBytesProcessed;
 
-  public function setInputFileBytes($inputFileBytes)
+  public function setCreationTime($creationTime)
   {
-    $this->inputFileBytes = $inputFileBytes;
+    $this->creationTime = $creationTime;
   }
 
-  public function getInputFileBytes()
+  public function getCreationTime()
   {
-    return $this->inputFileBytes;
+    return $this->creationTime;
   }
 
-  public function setInputFiles($inputFiles)
+  public function setEndTime($endTime)
   {
-    $this->inputFiles = $inputFiles;
+    $this->endTime = $endTime;
   }
 
-  public function getInputFiles()
+  public function getEndTime()
   {
-    return $this->inputFiles;
+    return $this->endTime;
   }
 
-  public function setOutputBytes($outputBytes)
+  public function setLoad(\Google\Service\Bigquery\JobStatistics3 $load)
   {
-    $this->outputBytes = $outputBytes;
+    $this->load = $load;
   }
 
-  public function getOutputBytes()
+  public function getLoad()
   {
-    return $this->outputBytes;
+    return $this->load;
   }
 
-  public function setOutputRows($outputRows)
+  public function setQuery(\Google\Service\Bigquery\JobStatistics2 $query)
   {
-    $this->outputRows = $outputRows;
+    $this->query = $query;
   }
 
-  public function getOutputRows()
+  public function getQuery()
   {
-    return $this->outputRows;
+    return $this->query;
+  }
+
+  public function setStartTime($startTime)
+  {
+    $this->startTime = $startTime;
+  }
+
+  public function getStartTime()
+  {
+    return $this->startTime;
+  }
+
+  public function setTotalBytesProcessed($totalBytesProcessed)
+  {
+    $this->totalBytesProcessed = $totalBytesProcessed;
+  }
+
+  public function getTotalBytesProcessed()
+  {
+    return $this->totalBytesProcessed;
   }
 }

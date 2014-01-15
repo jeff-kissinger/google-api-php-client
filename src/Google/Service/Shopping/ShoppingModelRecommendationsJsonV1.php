@@ -18,17 +18,29 @@ namespace Google\Service\Shopping;
  */
 
 
-class RankingRules extends \Google\Model
+class ShoppingModelRecommendationsJsonV1 extends \Google\Collection
 {
-  public $name;
+  protected $recommendationListType = '\Google\Service\Shopping\ShoppingModelRecommendationsJsonV1RecommendationList';
+  protected $recommendationListDataType = 'array';
+  public $type;
 
-  public function setName($name)
+  public function setRecommendationList($recommendationList)
   {
-    $this->name = $name;
+    $this->recommendationList = $recommendationList;
   }
 
-  public function getName()
+  public function getRecommendationList()
   {
-    return $this->name;
+    return $this->recommendationList;
+  }
+
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+
+  public function getType()
+  {
+    return $this->type;
   }
 }

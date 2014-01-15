@@ -18,16 +18,13 @@ namespace Google;
  */
 
 /**
- * This class defines attributes, valid values, and usage which is generated
+ * This class defines attributes, valid values, and usage which is generated         
  * from a given json schema.
  * http://tools.ietf.org/html/draft-zyp-json-schema-03#section-5
  *
  * @author Chirag Shah <chirags@google.com>
  *
  */
-
-use ArrayAccess;
-
 class Model implements ArrayAccess
 {
   protected $data = array();
@@ -97,7 +94,7 @@ class Model implements ArrayAccess
     }
     $this->data = $array;
   }
-
+  
   /**
    * Create a simplified object suitable for straightforward
    * conversion to JSON. This is relatively expensive
@@ -165,14 +162,14 @@ class Model implements ArrayAccess
 
   /**
    * Verify if $obj is an array.
-   * @throws GoogleException Thrown if $obj isn't an array.
+   * @throws \Google\GoogleException Thrown if $obj isn't an array.
    * @param array $obj Items that should be validated.
    * @param string $method Method expecting an array as an argument.
    */
   public function assertIsArray($obj, $method)
   {
     if ($obj && !is_array($obj)) {
-      \Google\GoogleException(
+      throw new \Google\GoogleException(
           "Incorrect parameter type passed to $method(),"
           . " expected an array."
       );

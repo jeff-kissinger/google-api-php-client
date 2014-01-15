@@ -1,5 +1,5 @@
 <?php
-namespace Google\Service\Shopping;
+namespace Google\Service\Oauth2\Userinfo;
 
 /*
  * Copyright 2010 Google Inc.
@@ -17,19 +17,27 @@ namespace Google\Service\Shopping;
  * the License.
  */
 
-
-class Variants extends \Google\Model
+/**
+ * The "userinfo" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $oauth2Service = new Google_Service_Oauth2(...);
+ *   $userinfo = $oauth2Service->userinfo;
+ *  </code>
+ */
+class Resource extends \Google\Service\Resource
 {
-  protected $variantType = '\Google\Service\Shopping\ShoppingModelProductJsonV1';
-  protected $variantDataType = '';
 
-  public function setVariant(\Google\Service\Shopping\ShoppingModelProductJsonV1 $variant)
+  /**
+   * (userinfo.get)
+   *
+   * @param array $optParams Optional parameters.
+   * @return \Google\Service\Oauth2\Userinfo
+   */
+  public function get($optParams = array())
   {
-    $this->variant = $variant;
-  }
-
-  public function getVariant()
-  {
-    return $this->variant;
+    $params = array();
+    $params = array_merge($params, $optParams);
+    return $this->call('get', array($params), "\Google\Service\Oauth2\Userinfo");
   }
 }

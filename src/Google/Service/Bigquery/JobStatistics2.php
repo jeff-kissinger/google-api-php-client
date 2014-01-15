@@ -1,5 +1,5 @@
 <?php
-namespace Google\Service\Shopping;
+namespace Google\Service\Bigquery;
 
 /*
  * Copyright 2010 Google Inc.
@@ -18,18 +18,28 @@ namespace Google\Service\Shopping;
  */
 
 
-class RecommendationList extends \Google\Model
+class JobStatistics2 extends \Google\Model
 {
-  protected $productType = '\Google\Service\Shopping\ShoppingModelProductJsonV1';
-  protected $productDataType = '';
+  public $cacheHit;
+  public $totalBytesProcessed;
 
-  public function setProduct(\Google\Service\Shopping\ShoppingModelProductJsonV1 $product)
+  public function setCacheHit($cacheHit)
   {
-    $this->product = $product;
+    $this->cacheHit = $cacheHit;
   }
 
-  public function getProduct()
+  public function getCacheHit()
   {
-    return $this->product;
+    return $this->cacheHit;
+  }
+
+  public function setTotalBytesProcessed($totalBytesProcessed)
+  {
+    $this->totalBytesProcessed = $totalBytesProcessed;
+  }
+
+  public function getTotalBytesProcessed()
+  {
+    return $this->totalBytesProcessed;
   }
 }

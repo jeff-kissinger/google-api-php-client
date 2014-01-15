@@ -18,50 +18,30 @@ namespace Google\Service\Shopping;
  */
 
 
-class ShoppingModelCategoryJsonV extends \Google\Collection
+class ShoppingModelExtrasJsonV1 extends \Google\Collection
 {
-  public $id;
-  public $parents;
-  public $shortName;
-  public $url;
+  protected $facetRulesType = '\Google\Service\Shopping\ShoppingModelExtrasJsonV1FacetRules';
+  protected $facetRulesDataType = 'array';
+  protected $rankingRulesType = '\Google\Service\Shopping\ShoppingModelExtrasJsonV1RankingRules';
+  protected $rankingRulesDataType = 'array';
 
-  public function setId($id)
+  public function setFacetRules($facetRules)
   {
-    $this->id = $id;
+    $this->facetRules = $facetRules;
   }
 
-  public function getId()
+  public function getFacetRules()
   {
-    return $this->id;
+    return $this->facetRules;
   }
 
-  public function setParents($parents)
+  public function setRankingRules($rankingRules)
   {
-    $this->parents = $parents;
+    $this->rankingRules = $rankingRules;
   }
 
-  public function getParents()
+  public function getRankingRules()
   {
-    return $this->parents;
-  }
-
-  public function setShortName($shortName)
-  {
-    $this->shortName = $shortName;
-  }
-
-  public function getShortName()
-  {
-    return $this->shortName;
-  }
-
-  public function setUrl($url)
-  {
-    $this->url = $url;
-  }
-
-  public function getUrl()
-  {
-    return $this->url;
+    return $this->rankingRules;
   }
 }

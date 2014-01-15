@@ -78,7 +78,7 @@ class Resource
    */
   public function call($name, $arguments, $expected_class = null)
   {
-     if (! isset($this->methods[$name])) {
+    if (! isset($this->methods[$name])) {
       throw new \Google\GoogleException(
           "Unknown function: " .
           "{$this->serviceName}->{$this->resourceName}->{$name}()"
@@ -122,7 +122,7 @@ class Resource
         $method['parameters'],
         $this->stackParameters
     );
-      foreach ($parameters as $key => $val) {
+    foreach ($parameters as $key => $val) {
       if ($key != 'postBody' && ! isset($method['parameters'][$key])) {
         throw new \Google\GoogleException("($name) unknown parameter: '$key'");
       }
@@ -133,7 +133,7 @@ class Resource
           $paramSpec['required'] &&
           ! isset($parameters[$paramName])
       ) {
-        throw new Google_Exception("($name) missing required param: '$paramName'");
+        throw new \Google\GoogleException("($name) missing required param: '$paramName'");
       }
       if (isset($parameters[$paramName])) {
         $value = $parameters[$paramName];

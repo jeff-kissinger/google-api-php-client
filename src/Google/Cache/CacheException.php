@@ -18,6 +18,6 @@ namespace Google\Cache;
  */
 
 
-class CacheException extends \Google\CacheException
+class CacheException extends \Google\GoogleException
 {
 }

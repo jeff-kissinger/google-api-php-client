@@ -18,6 +18,6 @@ namespace Google\IO;
  */
 
 
-class IOException extends \Google\IOException
+class IOException extends \Google\GoogleException
 {
 }
