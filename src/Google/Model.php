@@ -25,6 +25,9 @@ namespace Google;
  * @author Chirag Shah <chirags@google.com>
  *
  */
+
+use ArrayAccess;
+
 class Model implements ArrayAccess
 {
   protected $data = array();
